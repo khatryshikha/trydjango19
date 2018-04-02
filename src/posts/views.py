@@ -51,8 +51,8 @@ def post_update(request,id=None):
 		print "inform"
 		instance = form.save(commit=False)
 		instance.save()
-		#return HttpResponseRedirect(instance.get_absolute_url())
-		return redirect('/posts/id')
+		return HttpResponseRedirect(instance.get_absolute_url())
+		#return redirect('/posts/id')
 	print "2mid"
 	context = {
 		"title":instance.title,
